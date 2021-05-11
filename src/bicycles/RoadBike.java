@@ -1,5 +1,5 @@
 package bicycles;
-
+//Bicycle is an interface that means its an Abstract class...
 public class RoadBike implements Bicycle {
     private int speed;
 

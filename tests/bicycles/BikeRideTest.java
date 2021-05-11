@@ -11,16 +11,16 @@ public class BikeRideTest {
         MountainBike bicycle1 = new MountainBike();
         BikeRide bike1 = new BikeRide(bicycle1);
         bike1.ride();
-        assertEquals(26, bike1.currentSpeed());
+        assertEquals(14, bike1.currentSpeed());
 
     }
     @Test
     public void shouldDoMultipleAcceleratesCorrectlyOnRoadBike() {
 
-        RoadBike bicycle1 = new RoadBike();
-        BikeRide bike1 = new BikeRide(bicycle1);
-        bike1.ride();
-        assertEquals(36, bike1.currentSpeed());
+        RoadBike bicycle2 = new RoadBike();
+        BikeRide bike2 = new BikeRide(bicycle2);
+        bike2.ride();
+        assertEquals(36, bike2.currentSpeed());
 
     }
 }

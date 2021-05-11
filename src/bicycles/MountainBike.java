@@ -9,7 +9,7 @@ public class MountainBike implements Bicycle {
 
     @Override
     public void brake() {
-    speed += 3;
+    speed -= 3;
     }
 
     @Override

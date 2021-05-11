@@ -23,6 +23,22 @@ public class BicycleTest {
     }
 
     @Test
+    public void shouldBeAbleToBreakOnMountainBike() {
+        MountainBike bicycle = new MountainBike();
+        bicycle.brake();
+
+        assertEquals(-3, bicycle.currentSpeed());
+    }
+
+    @Test
+    public void shouldBeAbleToBreakOnRoadBike() {
+        RoadBike bicycle = new RoadBike();
+        bicycle.brake();
+
+        assertEquals(-4, bicycle.currentSpeed());
+    }
+
+    @Test
     public void shouldAccelerateAndBrakeCorrectlyOnMountainBike() {
 
         MountainBike bicycle = new MountainBike();
@@ -38,6 +54,28 @@ public class BicycleTest {
         bicycle.accelerate();
         bicycle.brake();
         assertEquals(7, bicycle.currentSpeed());
+
+    }
+    @Test
+    public void shouldBeAbleToStopOnMountainBike() {
+
+        MountainBike bicycle = new MountainBike();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.accelerate();
+        bicycle.stop();
+        assertEquals(0, bicycle.currentSpeed());
+
+}
+    @Test
+    public void shouldBeAbleToStopOnRoadBike() {
+
+        RoadBike bicycle = new RoadBike();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.accelerate();
+        bicycle.stop();
+        assertEquals(0, bicycle.currentSpeed());
 
     }
 //    @Test
@@ -62,17 +100,7 @@ public class BicycleTest {
 //        assertEquals(1, bicycle.currentSpeed());
 //
 //    }
-//    @Test
-//    public void shouldBeAbleToStop() {
 //
-//        Bicycle bicycle = new Bicycle();
-//        bicycle.accelerate();
-//        bicycle.brake();
-//        bicycle.accelerate();
-//        bicycle.stop();
-//        assertEquals(0, bicycle.currentSpeed());
-//
-//    }
 //    @Test
 //    public  void shouldBeAbleToAccelerateAfterStopping() {
 //        Bicycle bicycle = new Bicycle();
@@ -80,11 +108,5 @@ public class BicycleTest {
 //        bicycle.accelerate();
 //        assertEquals(5, bicycle.currentSpeed());
 //    }
-//    @Test
-//    public void shouldBeAbleToBreak() {
-//        Bicycle bicycle = new Bicycle();
-//
-//        bicycle.brake();
-//        assertEquals(-3, bicycle.currentSpeed());
-//    }
+
 }

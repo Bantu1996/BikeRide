@@ -1,6 +1,7 @@
 package bicycles;
 
 public class BikeRide {
+//    a final variable cannot be reassigned
     public final Bicycle bicycle;
 
 
@@ -19,3 +20,4 @@ public BikeRide (Bicycle bike) {
         this.bicycle.accelerate();
     }
 }
+
