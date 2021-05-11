@@ -18,12 +18,4 @@ public BikeRide (Bicycle bike) {
         this.bicycle.brake();
         this.bicycle.accelerate();
     }
-
-    public static void main(String[] args) {
-        Bicycle bicycle1 = new Bicycle();
-        BikeRide bike1 = new BikeRide(bicycle1);
-        bike1.ride();
-
-        System.out.println(bike1.currentSpeed());
-    }
 }
