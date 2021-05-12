@@ -23,4 +23,14 @@ public class BikeRideTest {
         assertEquals(36, bike2.currentSpeed());
 
     }
+
+    @Test
+    public void shouldDoMultipleAcceleratesCorrectlyOnTandem() {
+
+        Tandem bicycle3 = new Tandem();
+        BikeRide bike3 = new BikeRide(bicycle3);
+        bike3.ride();
+        assertEquals(34, bike3.currentSpeed());
+
+    }
 }

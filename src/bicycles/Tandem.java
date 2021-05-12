@@ -1,15 +1,14 @@
 package bicycles;
 
-public class MountainBike extends BicycleBase  {
-//    private int speed;
+public class Tandem extends BicycleBase {
 
     @Override
     public void accelerate() {
-    changeSpeed(5);
+        changeSpeed(12);
     }
 
     @Override
     public void brake() {
-    changeSpeed(-3);
+    changeSpeed(-7);
     }
 }
