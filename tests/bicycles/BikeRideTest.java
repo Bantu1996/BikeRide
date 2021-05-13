@@ -9,7 +9,7 @@ public class BikeRideTest {
     public void shouldDoMultipleAcceleratesCorrectlyOnMountainBike() {
 
         MountainBike bicycle1 = new MountainBike();
-        BikeRide bike1 = new BikeRide(bicycle1);
+        MountainBike bike1 = new MountainBike(bicycle1);
         bike1.ride();
         assertEquals(14, bike1.currentSpeed());
 
@@ -18,7 +18,7 @@ public class BikeRideTest {
     public void shouldDoMultipleAcceleratesCorrectlyOnRoadBike() {
 
         RoadBike bicycle2 = new RoadBike();
-        BikeRide bike2 = new BikeRide(bicycle2);
+         bike2 = new BikeRideOne(bicycle2);
         bike2.ride();
         assertEquals(36, bike2.currentSpeed());
 
@@ -28,7 +28,7 @@ public class BikeRideTest {
     public void shouldDoMultipleAcceleratesCorrectlyOnTandem() {
 
         Tandem bicycle3 = new Tandem();
-        BikeRide bike3 = new BikeRide(bicycle3);
+        BikeRideOne bike3 = new BikeRideOne(bicycle3);
         bike3.ride();
         assertEquals(34, bike3.currentSpeed());
 
