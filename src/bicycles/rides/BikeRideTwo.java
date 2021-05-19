@@ -1,7 +1,6 @@
 package bicycles.rides;
 
 import bicycles.Bicycle;
-import bicycles.BikeRide;
 
 public class BikeRideTwo implements BikeRide {
     //    a final variable cannot be reassigned
@@ -9,7 +8,7 @@ public class BikeRideTwo implements BikeRide {
     public final Bicycle bicycle;
 
 
-    public BikeRideTwo(Bicycle bike) {//    a final variable cannot be reassigned
+    public BikeRideTwo(Bicycle bike) {
 
         this.bicycle = bike;
     }
