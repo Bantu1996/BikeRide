@@ -20,9 +20,14 @@ bicycleList.add(bicycle);
     }
     }
     public int getCountForType(BicycleType bicycleType) {
-        if(this.count < bicycleList.size()) {
-            count++;
-}
+        for (Bicycle bicycle : bicycleList) {
+            if (bicycleType == bicycle.getBicycleType()) {
+                count++;
+            }
+        }
         return count;
+    }
+    public int getEnteredCount(){
+        return bicycleList.size();
     }
     }

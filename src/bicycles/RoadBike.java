@@ -1,6 +1,6 @@
 package bicycles;
 //Bicycle is an interface that means its an Abstract class...
-public class RoadBike extends BicycleBase {
+public abstract class RoadBike extends BicycleBase {
 //    private int speed;
 
     @Override
