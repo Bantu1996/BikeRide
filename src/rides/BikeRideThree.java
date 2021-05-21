@@ -1,6 +1,7 @@
-package bicycles.rides;
+package rides;
 
-import bicycles.Bicycle;
+import model.Bicycle;
+import bicycles.BikeRide;
 
 public class BikeRideThree implements BikeRide {
     //    a final variable cannot be reassigned

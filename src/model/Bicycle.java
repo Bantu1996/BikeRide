@@ -1,4 +1,6 @@
-package bicycles;
+package model;
+
+import bicycles.BicycleType;
 
 public interface Bicycle {
 

@@ -1,6 +1,8 @@
-package bicycles;
+package model;
 
-public class MountainBike extends BicycleBase  {
+import bicycles.BicycleType;
+
+public class MountainBike extends BicycleBase {
 //    private int speed;
 
 

@@ -1,6 +1,6 @@
-package bicycles.rides;
+package bicycles;
 
-import bicycles.Bicycle;
+import model.Bicycle;
 
 public interface BikeRide {
  void ride(Bicycle bicycle);

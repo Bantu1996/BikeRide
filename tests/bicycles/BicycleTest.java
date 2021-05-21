@@ -1,6 +1,8 @@
 package bicycles;
 
-import bicycles.specifications.BicycleSpecification;
+import model.MountainBike;
+import model.RoadBike;
+import model.Tandem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

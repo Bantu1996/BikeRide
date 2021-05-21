@@ -1,14 +1,15 @@
-package bicycles.rides;
+package rides;
 
-import bicycles.Bicycle;
+import model.Bicycle;
+import bicycles.BikeRide;
 
-public class BikeRideTwo implements BikeRide {
+public class BikeRideOne implements BikeRide {
     //    a final variable cannot be reassigned
 
     public final Bicycle bicycle;
 
 
-    public BikeRideTwo(Bicycle bike) {
+    public BikeRideOne(Bicycle bike) {
 
         this.bicycle = bike;
     }
@@ -19,11 +20,7 @@ public class BikeRideTwo implements BikeRide {
         this.bicycle.accelerate();
         this.bicycle.accelerate();
         this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
+        this.bicycle.brake();
         this.bicycle.brake();
         this.bicycle.accelerate();
     }

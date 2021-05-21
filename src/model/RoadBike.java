@@ -1,4 +1,7 @@
-package bicycles;
+package model;
+
+import bicycles.BicycleType;
+
 //Bicycle is an interface that means its an Abstract class...
 public class RoadBike extends BicycleBase {
 //    private int speed;
