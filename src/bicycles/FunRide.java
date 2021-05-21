@@ -5,13 +5,13 @@ import java.util.List;
 
 public class FunRide {
 int maximum;
-int count;
+int count = 0;
 
     private List <Bicycle> bicycleList = new ArrayList<Bicycle>();
-    FunRide(int maximum) {
+    public FunRide(int maximum) {
         this.maximum = maximum;
     }
-    void accept(Bicycle bicycle) {
+     public void accept(Bicycle bicycle) {
     if(bicycleList.isEmpty() && this.maximum > bicycleList.size()){
 bicycleList.add(bicycle);
     }

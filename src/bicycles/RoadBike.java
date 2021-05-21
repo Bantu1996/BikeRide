@@ -1,6 +1,6 @@
 package bicycles;
 //Bicycle is an interface that means its an Abstract class...
-public abstract class RoadBike extends BicycleBase {
+public class RoadBike extends BicycleBase {
 //    private int speed;
 
     @Override
@@ -11,6 +11,11 @@ public abstract class RoadBike extends BicycleBase {
     @Override
     public void brake() {
    changeSpeed(-4);
+    }
+
+    @Override
+    public BicycleType getBicycleType() {
+        return BicycleType.RoadBike;
     }
 
 }

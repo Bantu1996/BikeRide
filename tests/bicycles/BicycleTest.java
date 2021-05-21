@@ -123,29 +123,6 @@ public class BicycleTest {
         assertEquals(60, tandem.currentSpeed());
 
     }
-    @Test
-    public void shouldShowMountainBikeSpecs(){
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3);
 
-        assertEquals(5, mountainBikeSpec.getAccelerationSpeed());
-
-        assertEquals(3,mountainBikeSpec.getBrakeSpeed());
-    }
-    @Test
-            public void shouldShowRoadBikeSpecs(){
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4);
-
-        assertEquals(11,roadBikeSpec.getAccelerationSpeed());
-
-        assertEquals(4,roadBikeSpec.getBrakeSpeed());
-    }
-    @Test
-    public void shouldShowTandemSpecs(){
-        BicycleSpecification tandemSpec = new BicycleSpecification(12, 7);
-
-        assertEquals(12,tandemSpec.getAccelerationSpeed());
-
-        assertEquals(7,tandemSpec.getBrakeSpeed());
-    }
 
 }

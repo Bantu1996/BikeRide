@@ -10,6 +10,7 @@ public interface Bicycle {
 
      int stop ();
 
-     Bicycle getBicycleType();
+     BicycleType getBicycleType();
+
 
 }
