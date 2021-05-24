@@ -28,17 +28,19 @@ public class BicycleTest {
     @Test
     public void shouldBeAbleToBreakOnMountainBike() {
         MountainBike bicycle = new MountainBike();
+        bicycle.accelerate();
         bicycle.brake();
 
-        assertEquals(-3, bicycle.currentSpeed());
+        assertEquals(2, bicycle.currentSpeed());
     }
 
     @Test
     public void shouldBeAbleToBreakOnRoadBike() {
         RoadBike bicycle = new RoadBike();
+        bicycle.accelerate();
         bicycle.brake();
 
-        assertEquals(-4, bicycle.currentSpeed());
+        assertEquals(7, bicycle.currentSpeed());
     }
 
     @Test
@@ -46,8 +48,9 @@ public class BicycleTest {
 
         MountainBike bicycle = new MountainBike();
         bicycle.accelerate();
+        bicycle.accelerate();
         bicycle.brake();
-        assertEquals(8, bicycle.currentSpeed());
+        assertEquals(7, bicycle.currentSpeed());
 
     }
     @Test

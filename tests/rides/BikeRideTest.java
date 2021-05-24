@@ -1,7 +1,6 @@
 package rides;
 
 import bicycles.*;
-import bicycles.rides.*;
 import bicycles.BicycleFromSpec;
 import bicycles.BicycleSpecification;
 import model.Bicycle;
@@ -95,99 +94,5 @@ public class BikeRideTest {
         assertEquals(3, bikeRideThree.currentSpeed());
 
     }
-    @Test
-    public void shouldShowMountainBikeSpecs(){
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
-        Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
-
-        assertEquals(5,mountainBikeSpec.getAccelerationSpeed());
-
-        assertEquals(3,mountainBikeSpec.getBrakeSpeed());
-
-        assertEquals(BicycleType.MountainBike,mountainBikeSpec.getBicycleType());
-    }
-
-    @Test
-    public void shouldShowRoadBikeSpecs(){
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
-        Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
-
-        assertEquals(11,roadBikeSpec.getAccelerationSpeed());
-
-        assertEquals(4,roadBikeSpec.getBrakeSpeed());
-
-        assertEquals(BicycleType.RoadBike,roadBikeSpec.getBicycleType());
-    }
-
-    @Test
-    public void shouldShowTandemSpecs(){
-        BicycleSpecification tandemSpec = new BicycleSpecification(12, 7, BicycleType.Tandem);
-        Bicycle tandem = new BicycleFromSpec(tandemSpec);
-
-        assertEquals(12,tandemSpec.getAccelerationSpeed());
-
-        assertEquals(7,tandemSpec.getBrakeSpeed());
-
-        assertEquals(BicycleType.Tandem,tandemSpec.getBicycleType());
-    }
-
-    @Test
-    public void shouldShowMountainBikeFunRides(){
-        FunRide funRide = new FunRide(9);
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
-        Bicycle bicycle = new BicycleFromSpec(mountainBikeSpec);
-        funRide.accept(bicycle);
-
-        assertEquals(1,funRide.getEnteredCount());
-    }
-
-    @Test
-    public void shouldShowRoadBikeFunRides(){
-       FunRide funRide = new FunRide(9);
-
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
-        Bicycle bicycle = new BicycleFromSpec(roadBikeSpec);
-        funRide.accept(bicycle);
-        assertEquals(1,funRide.getEnteredCount());
-    }
-@Test
-    public void shouldShowTandemFunRides(){
-        FunRide funRide = new FunRide(9);
-
-        BicycleSpecification tandemSpec = new BicycleSpecification(12, 7, BicycleType.Tandem);
-        Bicycle bicycle = new BicycleFromSpec(tandemSpec);
-        funRide.accept(bicycle);
-        assertEquals(1,funRide.getEnteredCount());
-    }
-
-    @Test
-    public void shouldShowMountainBikeFunRidesTypes(){
-        FunRide funRide = new FunRide(9);
-
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
-        Bicycle bicycle = new BicycleFromSpec(mountainBikeSpec);
-        funRide.accept(bicycle);
-        assertEquals(1,funRide.getCountForType(BicycleType.MountainBike));
-    }
-
-    @Test
-    public void shouldShowRoadBikeFunRidesTypes(){
-        FunRide funRide = new FunRide(9);
-
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
-        Bicycle bicycle = new BicycleFromSpec(roadBikeSpec);
-        funRide.accept(bicycle);
-        assertEquals(1,funRide.getCountForType(BicycleType.RoadBike));
-    }
-    @Test
-    public void shouldShowTandemFunRidesTypes(){
-        FunRide funRide = new FunRide(9);
-
-        BicycleSpecification tandemSpec = new BicycleSpecification(5, 3, BicycleType.Tandem);
-        Bicycle bicycle = new BicycleFromSpec(tandemSpec);
-        funRide.accept(bicycle);
-        assertEquals(1,funRide.getCountForType(BicycleType.Tandem));
-    }
-
 
 }

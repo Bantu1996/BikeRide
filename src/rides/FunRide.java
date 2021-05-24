@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FunRide {
-int maximum;
+public int maximum;
 int count = 0;
 
     private List <Bicycle> bicycleList = new ArrayList<Bicycle>();
@@ -15,7 +15,7 @@ int count = 0;
         this.maximum = maximum;
     }
      public void accept(Bicycle bicycle) {
-    if(bicycleList.isEmpty() && this.maximum > bicycleList.size()){
+    if(!bicycleList.contains(bicycle) && this.maximum > bicycleList.size()){
 bicycleList.add(bicycle);
     }
     else{
@@ -23,12 +23,13 @@ bicycleList.add(bicycle);
     }
     }
     public int getCountForType(BicycleType bicycleType) {
+        final int maximum = this.maximum;
         for (Bicycle bicycle : bicycleList) {
             if (bicycleType == bicycle.getBicycleType()) {
                 count++;
             }
         }
-        return count;
+        return maximum;
     }
     public int getEnteredCount(){
         return bicycleList.size();
