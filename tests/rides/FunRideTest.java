@@ -55,20 +55,27 @@ public class FunRideTest {
 
     @Test
     public void shouldShowRoadBikeFunRidesTypes(){
-        FunRide funRide = new FunRide(9);
+        FunRide funRide = new FunRide(1);
 
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(7, 4, BicycleType.MountainBike);
         BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
         Bicycle bicycle = new BicycleFromSpec(roadBikeSpec);
+        Bicycle bicycle1 = new BicycleFromSpec(mountainBikeSpec);
+
         funRide.accept(bicycle);
+        funRide.accept(bicycle1);
         assertEquals(1,funRide.getCountForType(BicycleType.RoadBike));
     }
     @Test
     public void shouldShowTandemFunRidesTypes(){
-        FunRide funRide = new FunRide(9);
+        FunRide funRide = new FunRide(2);
 
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(7, 4, BicycleType.MountainBike);
         BicycleSpecification tandemSpec = new BicycleSpecification(5, 3, BicycleType.Tandem);
+        Bicycle bicycle1 = new BicycleFromSpec(mountainBikeSpec);
         Bicycle bicycle = new BicycleFromSpec(tandemSpec);
         funRide.accept(bicycle);
+        funRide.accept(bicycle1);
         assertEquals(1,funRide.getCountForType(BicycleType.Tandem));
     }
 
